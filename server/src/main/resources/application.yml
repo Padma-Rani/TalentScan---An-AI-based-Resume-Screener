@@ -1,0 +1,36 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: ai-resume-screener-server
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+  datasource:
+    url: jdbc:h2:mem:resumescreener
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    database-platform: org.hibernate.dialect.H2Dialect
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+# Base URL of the Python FastAPI AI model service
+ai-service:
+  base-url: http://localhost:8000
+
+# Frontend origin allowed to call this API (Vite dev server)
+cors:
+  allowed-origins: http://localhost:5173
