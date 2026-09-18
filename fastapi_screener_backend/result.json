@@ -1,0 +1,201 @@
+{
+  "candidate": {
+    "summary": "Software engineer with a proven ability to adapt in both self-starting and collaborative environments while staying focused on achieving high-quality results under strict deadlines. Seeking a challenging position at a prestigious company where I can expand my learning and build upon my developer skills.",
+    "skills": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React",
+      "Node.js",
+      "AngularJS",
+      "MongoDB",
+      "AWS",
+      "Aria",
+      "A1ty"
+    ],
+    "experience": [
+      {
+        "job_title": "Web Developer",
+        "company": "Squarespace",
+        "start_date": "August 2020",
+        "end_date": "current",
+        "description": "Coached 4 junior designers in ARIA and A1ty accessibility standards. Created and oversaw wireframe designs from client requests. Spearheaded transition from Firebase to AWS, saving company $3,700+ monthly and increasing load speeds by an average of 38%. Developed documentation to teach new team members company standards and best practices in Reacts and Nodejs. Addressed complex issues with real-time lead prioritization using Websocket connectivity."
+      },
+      {
+        "job_title": "Web Designer",
+        "company": "Coca-Cola",
+        "start_date": "January 2017",
+        "end_date": "August 2020",
+        "description": "Built mock designs and wireframes for landing pages for 5 new product concepts. Created accessible, responsive, and functional user interfaces to allow visitors on any device to have the same perfect user experience. Created the user experience that fetched, parsed, and formatted analytic data, and relayedit into React components. Collaborated on Complexity Score tool, which removed process bottlenecks by assigning scores to cost, time, and compliance issues, increasing efficiency by 72%"
+      },
+      {
+        "job_title": "Web Development Intern",
+        "company": "SiriusXM",
+        "start_date": "July 2016",
+        "end_date": "January 2017",
+        "description": "Developed user interfaces with modern JavaScript frameworks, HTML, and CSS3, which improved user satisfaction by 31%. Developed object-oriented code in Node.js with 100% accordance to industry and company standards. Learned multiple threading, concurrency, design patterns, and their impacts on application concurrency. Designed and developed web applications using JavaScript frameworks Reacts and Angularjs to increase target audience engagement by 12%"
+      }
+    ],
+    "education": [
+      {
+        "degree": "BS.",
+        "field": "Computer Science",
+        "institution": "University of Georgia",
+        "graduation_date": "September 2012"
+      }
+    ],
+    "projects": [],
+    "certifications": []
+  },
+  "job_requirements": {
+    "required_skills": [
+      "Java",
+      "Spring Boot",
+      "REST API",
+      "SQL",
+      "Object-Oriented Programming",
+      "Git"
+    ],
+    "preferred_skills": [
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "Microservices"
+    ],
+    "experience_months": 0,
+    "education": [
+      "Bachelor's degree in Computer Science, Information Technology, or a related field"
+    ],
+    "responsibilities": [
+      "Develop and maintain scalable software applications using Java and Spring Boot.",
+      "Design and integrate REST APIs.",
+      "Write and optimize SQL queries.",
+      "Debug and resolve application issues.",
+      "Collaborate with developers and other teams.",
+      "Use Git for version control."
+    ]
+  },
+  "skill_matching": {
+    "required_matches": [
+      {
+        "required_skill": "Java",
+        "matched_skill": null,
+        "score": 0.4,
+        "match_type": "no_match",
+        "matched": false
+      },
+      {
+        "required_skill": "Spring Boot",
+        "matched_skill": null,
+        "score": 0.26,
+        "match_type": "no_match",
+        "matched": false
+      },
+      {
+        "required_skill": "REST API",
+        "matched_skill": null,
+        "score": 0.31,
+        "match_type": "no_match",
+        "matched": false
+      },
+      {
+        "required_skill": "SQL",
+        "matched_skill": null,
+        "score": 0.26,
+        "match_type": "no_match",
+        "matched": false
+      },
+      {
+        "required_skill": "Object-Oriented Programming",
+        "matched_skill": null,
+        "score": 0.24,
+        "match_type": "no_match",
+        "matched": false
+      },
+      {
+        "required_skill": "Git",
+        "matched_skill": null,
+        "score": 0.31,
+        "match_type": "no_match",
+        "matched": false
+      }
+    ],
+    "preferred_matches": [
+      {
+        "required_skill": "AWS",
+        "matched_skill": "AWS",
+        "score": 1.0,
+        "match_type": "exact",
+        "matched": true
+      },
+      {
+        "required_skill": "Docker",
+        "matched_skill": null,
+        "score": 0.36,
+        "match_type": "no_match",
+        "matched": false
+      },
+      {
+        "required_skill": "Kubernetes",
+        "matched_skill": null,
+        "score": 0.32,
+        "match_type": "no_match",
+        "matched": false
+      },
+      {
+        "required_skill": "Microservices",
+        "matched_skill": null,
+        "score": 0.3,
+        "match_type": "no_match",
+        "matched": false
+      }
+    ],
+    "matched_required_skills": [],
+    "missing_required_skills": [
+      "Java",
+      "Spring Boot",
+      "REST API",
+      "SQL",
+      "Object-Oriented Programming",
+      "Git"
+    ],
+    "matched_preferred_skills": [
+      "AWS"
+    ],
+    "missing_preferred_skills": [
+      "Docker",
+      "Kubernetes",
+      "Microservices"
+    ],
+    "required_skill_score": 0.0,
+    "preferred_skill_score": 25.0,
+    "skill_score": 5.0
+  },
+  "qualification": {
+    "experience": {
+      "required_months": 0,
+      "candidate_months": 122,
+      "matched": true,
+      "score": 100.0
+    },
+    "education": {
+      "matched": false,
+      "score": 57.88,
+      "best_match": "BS. Computer Science University of Georgia",
+      "requirement": "Bachelor's degree in Computer Science, Information Technology, or a related field"
+    },
+    "qualification_score": 83.15
+  },
+  "final_score": 28.45,
+  "strengths": [
+    "Matched preferred skills: AWS",
+    "Meets/exceeds required experience (122 vs 0 months required)."
+  ],
+  "missing_areas": [
+    "Missing required skills: Java, Spring Boot, REST API, SQL, Object-Oriented Programming, Git",
+    "Does not clearly meet education requirement: Bachelor's degree in Computer Science, Information Technology, or a related field"
+  ],
+  "evidence": [],
+  "recommendation": "Weak match - significant gaps against job requirements.",
+  "error": null
+}

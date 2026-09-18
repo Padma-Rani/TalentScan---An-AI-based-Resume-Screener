@@ -1,28 +1,45 @@
-# =================================================================
-# AI Resume Screener & Semantic Job Matching Engine - Dependencies
-# =================================================================
 
-# Web Framework & Server
-fastapi>=0.109.0
-uvicorn[standard]>=0.27.0
-python-multipart>=0.0.9
+# AI_RESUME_SCREENER_FINAL - requirements.txt
+# Target: Python 3.13.3 (Windows)
 
-# Data Validation & Configuration
-pydantic>=2.6.0
-pydantic-settings>=2.1.0
-python-dotenv>=1.0.1
 
-# Hugging Face & Local AI Sentence Embeddings
-huggingface-hub>=0.20.0
-transformers>=4.36.0
-sentence-transformers>=2.3.1
-torch>=2.0.0
-scikit-learn>=1.4.0
-numpy>=1.26.0
+# NOTE ON VERSION PINNING:
+# Exact patch versions are intentionally left slightly open (using
+# >=) for sub-dependencies that Hugging Face updates frequently,
+# but core libraries are pinned to versions confirmed to install
+# and run cleanly on Python 3.13.3 as of early 2026.
+# Run `pip list` after install 
 
-# Document Parsers (PDF, DOCX, TXT)
-PyMuPDF>=1.23.21
-python-docx>=1.1.0
+# ---- Core ML / NLP stack ----
+# torch>=2.4.0                 # CPU build resolves automatically via pip on Windows;
+                              # installs a Python 3.13-compatible wheel.
+transformers>=4.46.0         # First line with solid Python 3.13 wheel support
+                              # and the modern generate()/chat template API
+                              # used for Qwen2.5-Instruct models.
+accelerate>=0.34.0           # Efficient model loading/device placement.
+sentence-transformers>=3.2.0 # Compatible with transformers>=4.46 and Python 3.13.
+# huggingface-hub>=0.25.0
 
-# Testing Suite
-pytest>=8.0.0
+# ---- Document / image handling ----
+# pymupdf>=1.24.10              # Modern "pymupdf" package name (import as `import pymupdf`,
+                               # NOT the deprecated `import fitz` style usage).
+pillow>=10.4.0                 # Image handling, required by OCR pipeline.
+pytesseract>=0.3.13             # Python wrapper around Tesseract OCR binary.
+                               # Requires Tesseract OCR to be installed separately
+                               # on Windows (see README).
+
+# ---- Utilities ----
+pydantic>=2.9.0                # Structured/validated data models for AI JSON output.
+numpy>=2.1.0                   # Required by torch/sentence-transformers on Py3.13.
+python-dotenv>=1.0.1            # Optional local configuration via .env file.
+python-dateutil>=2.9.0          # Deterministic date-math for total experience (months).
+
+# ---- Testing ----
+pytest>=8.3.0
+
+# ---- API layer ----
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+python-multipart>=0.0.12    # Required by FastAPI for Form()/File() parsing.
+
+

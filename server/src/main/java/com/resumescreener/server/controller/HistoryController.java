@@ -3,6 +3,7 @@ package com.resumescreener.server.controller;
 import com.resumescreener.server.dto.ScreeningResponse;
 import com.resumescreener.server.service.ScreeningService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +21,7 @@ public class HistoryController {
     }
 
     @GetMapping
-    public ResponseEntity<List<ScreeningResponse>> getHistory() {
-        return ResponseEntity.ok(screeningService.getHistory());
+    public ResponseEntity<List<ScreeningResponse>> getHistory(Authentication authentication) {
+        return ResponseEntity.ok(screeningService.getHistory(authentication.getName()));
     }
 }

@@ -1,7 +1,21 @@
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Layout from "../../../Layout";
 import HistoryTable from "./components/HistoryTable";
+import { getHistory } from "../../api/screeningApi";
 
 function HistoryRoutePage() {
+  const [items, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    getHistory()
+      .then(setItems)
+      .catch(() => setError("Unable to load screening history."))
+      .finally(() => setIsLoading(false));
+  }, []);
+
   return (
     <Layout>
       <div className="px-6 py-10">
@@ -15,15 +29,15 @@ function HistoryRoutePage() {
                 All screening history
               </h1>
             </div>
-            <a
-              href="/"
+            <Link
+              to="/"
               className="rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
             >
               Back to dashboard
-            </a>
+            </Link>
           </div>
 
-          <HistoryTable />
+          <HistoryTable items={items} isLoading={isLoading} error={error} />
         </div>
       </div>
     </Layout>

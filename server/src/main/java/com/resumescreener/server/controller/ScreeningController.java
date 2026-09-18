@@ -4,6 +4,7 @@ import com.resumescreener.server.dto.ScreeningResponse;
 import com.resumescreener.server.service.ScreeningService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -20,8 +21,9 @@ public class ScreeningController {
     @PostMapping(value = "/analyze", consumes = "multipart/form-data")
     public ResponseEntity<ScreeningResponse> analyze(
             @RequestPart("resume") MultipartFile resume,
-            @RequestPart("jobDescription") String jobDescription) {
-        ScreeningResponse response = screeningService.screenResume(resume, jobDescription);
+            @RequestPart("jobDescription") String jobDescription,
+            Authentication authentication) {
+        ScreeningResponse response = screeningService.screenResume(resume, jobDescription, authentication.getName());
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 }

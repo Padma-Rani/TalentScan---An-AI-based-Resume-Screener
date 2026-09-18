@@ -1,8 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate, useLocation } from "react-router-dom";
 import Layout from "../../../Layout";
 import ResultSummary from "./components/ResultSummary";
 
 function ResultRoutePage() {
+  const { state } = useLocation();
+
+  if (!state) {
+    return <Navigate to="/" replace />;
+  }
+
   return (
     <Layout>
       <div className="px-6 py-10">
@@ -24,7 +30,7 @@ function ResultRoutePage() {
             </Link>
           </div>
 
-          <ResultSummary />
+          <ResultSummary result={state} />
         </div>
       </div>
     </Layout>
